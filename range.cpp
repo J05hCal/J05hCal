@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void range(int lowInt, int upInt);
+void range;
 
 int main()
 {
@@ -24,7 +24,12 @@ int main()
   //range with lower & upper
   for(range = 1; range <= 24; ++range)
   {
+    
     cout << endl << "CALLING THE RANGE FUNCTION WITH UPPER AND LOWER ARGUMENTS" << endl;
   }
-  
+  //range with lower, upper, & divisor
+  for(range = 1; range <= 24; ++range)
+  {
+    
+  }
 }
