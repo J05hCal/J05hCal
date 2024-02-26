@@ -3,47 +3,46 @@
 #include <cmath>
 using namespace std;
 
-void Iterate (int iter;
+void Iterate (int iter);
 void DecimalApprox (int approx);
 void DisplayPi (int signif, double pi);
 
 int main()
 {
-  ??? //variables
+  //variables
+  int iter_amount{0};
+  string input{"default"};
+  int decimal_aprox{0};
 
   // Prompt the user if they want to iterate or have a decimal approx.
   cout << "\nThis program calculates the number Pi.\n\n";
 
   // Create a do while loop to prompt the user for Iteration or Approx.
   // Loop until the user enters the correct selection
-  ???
+  while(input != "I" || "A" || "i" || "a")
   {
-    cout << "Would you like to calculate it through I>teration or ";
-    cout << "A>pproximation: ";
-    cin >> ???;
+    cout << "Would you like to calculate it through Iteration or ";
+    cout << "Approximation: ";
+    cin >> input;
   }
 
-  ???
-
   // If it is iteration, ask how many iterations and call the Iterate function.
-  ???
-  {   
-    // Prompt the user of many iterations
-    cout << "How many iterations?: ";
-    cin >> ???;
+  cout << "How many interations would you like?  ";
+  cin >> iter_amount;
+  Iterate(iter_amount);
 
-    // Call the Iterate function
-    Iterate(???);
+     
+    
 
   // If it is approximation, ask the number of approximation and call thw DecimalApprox function
 
-    // Prompt the user of decimal approximation
-    cout << "How many decimals of approximation: ";
-    cin >> ???
+  // Prompt the user of decimal approximation
+  cout << "How many decimals of approximation: ";
+  cin >> decimal_aprox;
 
-    // Call the DecimalApprox function
-    DecimalApprox(???);
-  }
+  // Call the DecimalApprox function
+  DecimalApprox(decimal_aprox);
+  
   return 0;
 } // end of "main"
 
