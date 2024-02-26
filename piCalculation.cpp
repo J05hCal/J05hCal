@@ -10,9 +10,9 @@ void DisplayPi (int signif, double pi);
 int main()
 {
   //variables
-  int iter_amount{0};
+  double iter_amount{0};
   string input{"default"};
-  int decimal_aprox{0};
+  double decimal_aprox{0.0};
 
   // Prompt the user if they want to iterate or have a decimal approx.
   cout << "\nThis program calculates the number Pi.\n\n";
@@ -60,7 +60,7 @@ void Iterate (int iter)
   // do a loop to calculate pi based on the number of iterations
   for (size_t i{0}; i < iter; i++)
   {
-    double pi{pow(-1, iter)/(2 * iter + 1)};
+    double pi{pow(-1.0, iter)/(2.0 * iter + 1.0)};
   }
 
   // Call the DisplayPi function.
