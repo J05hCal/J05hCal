@@ -78,7 +78,7 @@ void DecimalApprox(int approx)
 
   // loop to calculate pi based on the approx value of signif. digits.
   do{
-      double pi{pow(-1, approx)/(2 * approx + 1)}; // calculate PI
+      double pi{pow(-1.0, approx)/(2.0 * approx + 1.0)}; // calculate PI
 
       // check if the significance has changed within 1 decimal approx.
       //if so break out of the loop
