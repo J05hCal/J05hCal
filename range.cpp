@@ -2,13 +2,17 @@
 using namespace std;
 
 void range;
+int lowInt;
+
+
+upInt;
 
 int main()
 {
   int dispVal;
   
   cout << "ENTER A LOWER AND UPPER INTEGER BOUNDARIES AND DIVISOR OF THE RANGE SEPARATED BY WHITE SPACE: \n";
-  cin >> range;
+  cin >> ;
   
   if(lowInt > upInt)
   {
@@ -24,8 +28,10 @@ int main()
   //range with lower & upper
   for(range = 1; range <= 24; ++range)
   {
-    
-    cout << endl << "CALLING THE RANGE FUNCTION WITH UPPER AND LOWER ARGUMENTS" << endl;
+    range(lowInt, upInt)
+    {
+      cout << endl << "CALLING THE RANGE FUNCTION WITH UPPER AND LOWER ARGUMENTS" << endl;
+    }
   }
   //range with lower, upper, & divisor
   for(range = 1; range <= 24; ++range)
