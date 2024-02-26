@@ -19,32 +19,34 @@ int main()
 
   // Create a do while loop to prompt the user for Iteration or Approx.
   // Loop until the user enters the correct selection
-  while(input != "I" || "A" || "i" || "a")
+  while(input != "I" || input != "A" || input != "i" || input != "a")
   {
     cout << "Would you like to calculate it through Iteration or ";
     cout << "Approximation: ";
     cin >> input;
+  
+
+    // If it is iteration, ask how many iterations and call the Iterate function.
+    if (input == "I" || input == "i")
+    {
+      cout << "How many interations would you like?  ";
+      cin >> iter_amount;
+      Iterate(iter_amount);
+
+    }
+
+    // If it is approximation, ask the number of approximation and call thw DecimalApprox function
+    if (input == "A" || input == "a")
+    {
+      // Prompt the user of decimal approximation
+      cout << "How many decimals of approximation: ";
+      cin >> decimal_aprox;
+
+      // Call the DecimalApprox function
+      DecimalApprox(decimal_aprox);
+    }
+
   }
-
-// If it is iteration, ask how many iterations and call the Iterate function.
-if (input == 'I' || input == 'i')
-{
-  cout << "How many interations would you like?  ";
-  cin >> iter_amount;
-  Iterate(iter_amount);
-
-}
-
-  // If it is approximation, ask the number of approximation and call thw DecimalApprox function
-if (input == 'A' || input == 'a')
-{
-   // Prompt the user of decimal approximation
-  cout << "How many decimals of approximation: ";
-  cin >> decimal_aprox;
-
-  // Call the DecimalApprox function
-  DecimalApprox(decimal_aprox);
-}
 
   return 0;
 } // end of "main"
@@ -69,9 +71,10 @@ void Iterate (int iter)
 
 void DecimalApprox(int approx)
 {
+  double pi{0.0};
   int i{0};
   double piVal{3.14}; // Pi value
-  double previousPi{piVal}; // Previous pi value
+  double previousPi{0.0}; // Previous pi value
 
   // loop to calculate pi based on the approx value of signif. digits.
   do{
@@ -87,7 +90,7 @@ void DecimalApprox(int approx)
       // update previousPi and increment i
       
       i++;
-      previousPi{pi};
+      double previousPi{pi};
   } while (i <= approx);
 
   // Call the DisplayPi function.
