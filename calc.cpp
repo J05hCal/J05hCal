@@ -21,7 +21,7 @@ void addition(int valOne, int valTwo)
 }
 
 // This function takes the two integers from the user and prints the DIFFERENCE.
-int difference(int valOne, int valTwo)
+void difference(int valOne, int valTwo)
   {
     int dif = valOne - valTwo;
 
@@ -29,7 +29,7 @@ int difference(int valOne, int valTwo)
   }
 
 // This function takes the two integers from the user and prints the PRODUCT.
-int product(int valOne, int valTwo)
+void product(int valOne, int valTwo)
 {
   int pro = valOne * valTwo;
 
@@ -70,8 +70,7 @@ void choice(char resp)
 
 }
 
-int main()
-{
+int main(int argc, char* argv[]) {
   
 
 
