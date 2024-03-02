@@ -58,30 +58,38 @@ int choice(char resp)
 {
   cout << "Would you like to input two different numbers?\nY/N: ";
   cin >> resp;
-  if(resp == 'N' || resp == 'n')
-  {
-    return 0;
-  }
+  
+    {
+      if(resp == 'N' || resp == 'n')
+      {
+        break;
+      }
 
-  else if(resp == 'Y' || resp == 'y') { }
-
-  else
-  {
-    cout << "Not valid input.\n";
-    choice('m');
-  }
-  return 0;
+      else if(resp == 'Y' || resp == 'y') { }
+      {
+        return disVal;
+      }
+      else
+      {
+        cout << "Not valid input.\n";
+        choice('m');
+      }
+      return 0;
+    }
 }
 
 int main(int argc, char* argv[]) {
   int valOne = 0;
   int valTwo = 0;
   char response = 'm';
-  choice(response);
-  disVal(valOne, valTwo);
-  addition(valOne, valTwo);
-  difference(valOne, valTwo);
-  product(valOne, valTwo);
-  division(valOne, valTwo);
+  while(choice(response))
+    {
+      disVal(valOne, valTwo);
+      addition(valOne, valTwo);
+      difference(valOne, valTwo);
+      product(valOne, valTwo);
+      division(valOne, valTwo);
+    }
+  
   return 0;
 }
