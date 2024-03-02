@@ -60,19 +60,29 @@ void choice(char resp)
 {
   if(resp == 'N' || resp == 'n')
   {
-    //break;
+    break;
   }
 
   else if(resp == 'Y' || resp == 'y')
   {
-    //return disVal;
+    continue;
   }
-
 }
 
 int main(int argc, char* argv[]) {
-  
-
-
+  int valOne;
+  int valTwo;
+  char response;
+  while(true) {
+    std::cout << "Would you like to input different numbers?\nY/N: "
+    std::cin >> response;
+    choice(response);
+    std::cout << "ENTER TWO INTEGERS SEPERATED BY WHITESPACE: ";
+    sdt::cin >> valOne >> valTwo;
+    addition(valOne, valTwo);
+    difference(valOne, valTwo);
+    product(valOne, valTwo);
+    division(valOne, valTwo);
+  }
   return 0;
 }
