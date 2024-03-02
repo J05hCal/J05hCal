@@ -9,8 +9,6 @@ void disVal(int &valOne, int &valTwo)
   cout << "ENTER TWO INTEGERS SEPERATED BY WHITESPACE: ";
 
   cin >> valOne >> valTwo;
-  
-  cout << valOne << valTwo << endl;
 }
 
 // This function takes the two integers from the user and prints the SUM.
@@ -37,7 +35,7 @@ void product(int valOne, int valTwo)
 }
 
 // This function takes the two integers from the user and prints the QUOTIENT AND THE REMANDER.
-void divison(int valOne, int valTwo)
+void division(int valOne, int valTwo)
 {
   int div = valOne / valTwo;
 
@@ -46,7 +44,7 @@ void divison(int valOne, int valTwo)
     if(valTwo < 0 || valTwo > 0)
     {
       cout << valOne << " / " << valTwo << " = " << div
-       << "with a remainder of " << divTwo << endl;
+       << " with a remainder of " << divTwo << endl;
     }
 
     else if(valTwo == 0)
@@ -56,33 +54,34 @@ void divison(int valOne, int valTwo)
 }
 
 // This function asks the user if they would like to input different numbers. 
-void choice(char resp)
+int choice(char resp)
 {
+  cout << "Would you like to input two different numbers?\nY/N: ";
+  cin >> resp;
   if(resp == 'N' || resp == 'n')
   {
-    break;
+    return 0;
   }
 
-  else if(resp == 'Y' || resp == 'y')
+  else if(resp == 'Y' || resp == 'y') { }
+
+  else
   {
-    continue;
+    cout << "Not valid input.\n";
+    choice('m');
   }
+  return 0;
 }
 
 int main(int argc, char* argv[]) {
-  int valOne;
-  int valTwo;
-  char response;
-  while(true) {
-    std::cout << "Would you like to input different numbers?\nY/N: "
-    std::cin >> response;
-    choice(response);
-    std::cout << "ENTER TWO INTEGERS SEPERATED BY WHITESPACE: ";
-    sdt::cin >> valOne >> valTwo;
-    addition(valOne, valTwo);
-    difference(valOne, valTwo);
-    product(valOne, valTwo);
-    division(valOne, valTwo);
-  }
+  int valOne = 0;
+  int valTwo = 0;
+  char response = 'm';
+  choice(response);
+  disVal(valOne, valTwo);
+  addition(valOne, valTwo);
+  difference(valOne, valTwo);
+  product(valOne, valTwo);
+  division(valOne, valTwo);
   return 0;
 }
