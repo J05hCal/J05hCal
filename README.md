@@ -1,23 +1,11 @@
-Since we just learned about reference parameters for functions, now's your chance to use them! You are to write a short program that prompts the user for two integer values. Then these values are passed to various functions, which will derive the sum, difference, product, and quotient with the remainder. A function can return more than one value by using formal parameters as reference variables.
+Here's an assignment that'll give you some practice with arrays, specifically 2D arrays. All you have to do is write a program that allows the user to populate two 2D arrays of integers (3 x 3 matrix) by calling the function InitMatrix. After the user has entered all the values, then call the function DispMatrix to display the two matrices. Then you can call the functions AddMatrices, TMatrix, and DetMatrix to calculate the addition of the matrices, the transpose of each matrix, and the determinant of each matrix respectively.   
 
-So the main function needs to declare plenty of local variables so that it can pass the necessary arguments to each function. Below are the functions and the parameters (Note that all functions will have a void return type):
+InitMatrix will take as argument a 2D array and the number of rows and have a void return type.  It will prompt the user to enter 9 total values for a 3 x 3 matrix.
 
-Sum
-The value of the first operand (pass by value)
-The value of the second operand (pass by value)
-A variable to store the sum (pass by reference)
-Difference
-The value of the first operand (pass by value)
-The value of the second operand (pass by value)
-A variable to store the difference (pass by reference)
-Product
-The value of the first operand (pass by value)
-The value of the second operand (pass by value)
-A variable to store the product (pass by reference)
-Division
-The value of the first operand (pass by value)
-The value of the second operand (pass by value)
-A variable to store the quotient (pass by reference)
-A variable to store the remainder (pass by reference)
+DispMatrix will take as argument a 2D array and the number of rows and have a void return type.  It will display the contents of the 2D array. Hint: I suggest you use the setw() function to display the matrices nicely.
 
-Each function returns no value to the caller. After the call to each function, main must display the results to stdout. What will you do if the user enters a value of zero for the second operand? If you don't handle the situation, your program will crash because the CPU will not allow division by zero. That means Division function must not allow division by zero to occur, and that the main function must write an appropriate message when displaying the final results of the calculations. Have your program run in a loop until the user decides it doesn’t want to continue.
+AddMatrix will take as argument two 2D arrays and the number of rows and have a void return type. It will add two 2D arrays and call DispMatrix to output the result.
+
+TMatrix will take as argument a 2D array and the number of rows and have a void return type. It will switch the rows and columns and call DispMatrix to output the result.
+
+DetMatrix will take as argument a 2D array and the number of rows and have an int return type.  It will calculate the determinate of a 2D array and return the result as an int.
