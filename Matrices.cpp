@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-void InitMatrix(int intVal, 
+void InitMatrix(int intVal)
+void 
 
 int main()
 {
