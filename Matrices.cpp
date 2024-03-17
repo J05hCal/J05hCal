@@ -27,28 +27,71 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-  int array[3][3];
+  int arrayA[3][3];
   cout << "ENTER 9 INTEGER VALUES FOR THE FIRST MATRIX: " << endl;
-  for(int i = 0; i < 9; i++) {
-    int intVal;
-    cin >> intVal;
-    if(i < 3) {
-      array[0][i] = intVal;
+  
+  for(int a = 0; a < 9; a++) 
+  {
+    int intValA;
+    cin >> intValA;
+    
+    if(a < 3) 
+    {
+      arrayA[0][a] = intValA;
     }
-    if(i < 6 && i >= 3) {
-      array[1][i - 3] = intVal;
+    if(a < 6 && a >= 3) 
+    {
+      arrayA[1][a - 3] = intValA;
     }
-    if(i < 9 && i >= 6) {
-      array[2][i - 6] = intVal;
+    if(a < 9 && a >= 6) 
+    {
+      arrayA[2][a - 6] = intValA;
     }
   }
-  cout << "Your array consists of:\n";
-  for(int row = 0; row < 3; row++) {
-    for(int col = 0; col < 3; col++) {
-      cout << array[row][col];
+
+for(int rowA = 0; rowA < 3; rowA++)
+    {
+    for(int colA = 0; colA < 3; colA++) 
+    {
+      cout << arrayA[rowA][colA];
     }
     cout << "\n";
   }
   cout << "Done!";
-return 0;
+  
+    int arrayB[3][3];
+  
+  cout << "ENTER 9 INTEGER VALUES FOR THE SECOND MATRIX: " << endl;
+  
+  for(int b = 0; b < 9; b++) 
+  {
+    int intValB;
+    cin >> intValB;
+    
+    if(b < 3) 
+    {
+      arrayB[0][b] = intValB;
+    }
+    if(b < 6 && b >= 3) 
+    {
+      arrayB[1][b - 3] = intValB;
+    }
+    if(b < 9 && b >= 6) 
+    {
+      arrayB[2][b - 6] = intValB;
+    }
+  }
+  cout << "Your array consists of: \n";
+  
+  for(int rowB = 0; rowB < 3; rowB++)
+    {
+    for(int colB = 0; colB < 3; colB++) 
+    {
+      cout << arrayB[rowB][colB];
+    }
+    cout << "\n";
+  }
+  cout << "Done!";
+
+  return 0;
 }
