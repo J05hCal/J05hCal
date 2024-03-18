@@ -58,9 +58,7 @@ for(int rowA = 0; rowA < 3; rowA++)
     }
     cout << "\n";
   }
-  cout << "Done!";
-  
-    int arrayB[3][3];
+  int arrayB[3][3];
   
   cout << "ENTER 9 INTEGER VALUES FOR THE SECOND MATRIX: " << endl;
   
@@ -82,17 +80,15 @@ for(int rowA = 0; rowA < 3; rowA++)
       arrayB[2][b - 6] = intValB;
     }
   }
-  cout << "Your array consists of: \n";
+  cout << "THE MATRICES YOU'VE ENTERED ARE: \n";
   
   for(int rowB = 0; rowB < 3; rowB++)
     {
     for(int colB = 0; colB < 3; colB++) 
     {
-      cout << arrayB[rowB][colB];
+      cout << arrayA[rowA][colA] << endl << arrayB[rowB][colB] << endl;
     }
     cout << "\n";
   }
-  cout << "Done!";
-
   return 0;
 }
