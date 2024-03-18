@@ -90,7 +90,7 @@ for(int rowA = 0; rowA < 3; rowA++)
     }
   }
 //the sum of matrices
-  cout << "THE SUM OF THE MATRICES ARE: " << addMatrix << 
+  cout << "THE SUM OF THE MATRICES ARE: \n";
     
   for(int rowC = 0; rowC < 3; rowC++)
   {
