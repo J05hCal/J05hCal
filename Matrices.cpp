@@ -28,6 +28,7 @@ using namespace std;
 int main(int argc, char* argv[])
 {
   int arrayA[3][3];
+  
   cout << "ENTER 9 INTEGER VALUES FOR THE FIRST MATRIX: " << endl;
   
   for(int a = 0; a < 9; a++) 
