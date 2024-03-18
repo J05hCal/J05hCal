@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
 {
   int arrayA[3][3];
   
-  cout << "ENTER 9 INTEGER VALUES FOR THE FIRST MATRIX: " << endl;
+  cout << "ENTER 9 INTEGER VALUES FOR THE FIRST MATRIX: " << endl; //first matrix
   
   for(int a = 0; a < 9; a++) 
   {
@@ -60,7 +60,7 @@ for(int rowA = 0; rowA < 3; rowA++)
   }
   int arrayB[3][3];
   
-  cout << "ENTER 9 INTEGER VALUES FOR THE SECOND MATRIX: " << endl;
+  cout << "ENTER 9 INTEGER VALUES FOR THE SECOND MATRIX: " << endl; //second matrix
   
   for(int b = 0; b < 9; b++) 
   {
@@ -81,14 +81,26 @@ for(int rowA = 0; rowA < 3; rowA++)
     }
   }
   cout << "THE MATRICES YOU'VE ENTERED ARE: \n";
-  
+  //output of user's matrices
   for(int rowB = 0; rowB < 3; rowB++)
-    {
+  {
     for(int colB = 0; colB < 3; colB++) 
     {
       cout << arrayA[rowA][colA] << endl << arrayB[rowB][colB] << endl;
     }
-    cout << "\n";
+  }
+//the sum of matrices
+  cout << "THE SUM OF THE MATRICES ARE: " << addMatrix << 
+    
+  for(int rowC = 0; rowC < 3; rowC++)
+  {
+    for(int colC = 0; colC < 3; colC++) 
+    {
+      int addMatrix = intValA + intValB;
+      arrayA = addMatrix;
+
+      cout << arrayA[rowC][colC] << endl;
+    }
   }
   return 0;
 }
